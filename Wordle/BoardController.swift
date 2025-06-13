@@ -63,6 +63,13 @@ class BoardController: NSObject,
   private func applyNumLettersSettings(with settings: [String: Any]) {
     // START YOUR CODE HERE
     // ...
+      
+      guard let numKey = settings[kNumLettersKey] as? Int else {
+          assertionFailure("Expecting value of type int")
+                return
+      }
+      
+      numItemsPerRow=numKey
     // END YOUR CODE HERE
   }
   
@@ -76,6 +83,12 @@ class BoardController: NSObject,
     // START YOUR CODE HERE
     // ...
     // END YOUR CODE HERE
+      guard let numGuess = settings[kNumGuessesKey] as? Int else{
+          assertionFailure("Expecting value of type int")
+          return
+      }
+      
+      numRows=numGuess
   }
   
   // Exercise 3: Implement applyThemeSettings to change the goal word according to the theme
@@ -88,6 +101,17 @@ class BoardController: NSObject,
   private func applyThemeSettings(with settings: [String: Any]) {
     // START YOUR CODE HERE
     // ...
+      
+      guard let wordTheme = settings[kWordThemeKey] as? String else
+      {
+          assertionFailure("expecting value of type string")
+          return
+      }
+      
+      
+      print(goalWord)
+      goalWord=WordGenerator.generateGoalWord(with: WordTheme(rawValue: wordTheme)!)
+      print(goalWord)
     // END YOUR CODE HERE
   }
   
