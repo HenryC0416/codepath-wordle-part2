@@ -122,6 +122,14 @@ class BoardController: NSObject,
   private func applyIsAlienWordleSettings(with settings: [String: Any]) {
     // START YOUR CODE HERE
     // ...
+      
+     
+      guard let aKey = settings[kIsAlienWordleKey] as? Bool else{
+          assertionFailure("expecting value of type bool")
+          return
+      }
+      isAlienWordle=aKey
+      
     // START YOUR CODE HERE
   }
 }
