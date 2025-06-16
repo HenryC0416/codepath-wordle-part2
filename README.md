@@ -4,7 +4,7 @@ Submitted by: **Henry Chen**
 
 **Wordle** is an app that allows users to guess a word, while also allowing them the option to adjust the difficulty however they want
 
-Time spent: **5** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
@@ -13,7 +13,7 @@ The following **required** functionality is completed:
 - [x ] User can change the number of letters per row (the length of the goal word)
 - [x ] User can change the numbers of rows on the board (how many guesses allowed)
 - [x ] User can select a new themed set to pull the goal word from
-- [ ] User can select "alien wordle", causing the goal word to change after each guess
+- [x ] User can select "alien wordle", causing the goal word to change after each guess
 
 
 The following **optional** features are implemented:
