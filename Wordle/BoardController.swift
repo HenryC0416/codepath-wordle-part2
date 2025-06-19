@@ -34,15 +34,17 @@ class BoardController: NSObject,
     collectionView.delegate = self
     collectionView.dataSource = self
   }
-  
+private var currentSettings: [String: Any] = [:]
   // MARK: - Public Methods
   func resetBoard(with settings: [String: Any]) {
+    currentSettings = settings
     applyNumLettersSettings(with: settings)
     applyNumGuessesSettings(with: settings)
     applyThemeSettings(with: settings)
     applyIsAlienWordleSettings(with: settings)
     numTimesGuessed = 0
     collectionView.reloadData()
+    
   }
   
   // Exercise 5 Pt. 2 (optional): This function only needs to be implemented if you decide to do the optional requirement (see Pt. 1 in ViewController.swift)
@@ -51,6 +53,11 @@ class BoardController: NSObject,
   func resetBoardWithCurrentSettings() {
     // START YOUR CODE HERE
     // ...
+    
+    
+   
+      numTimesGuessed = 0
+         collectionView.reloadData()
     // END YOUR CODE HERE
   }
   
